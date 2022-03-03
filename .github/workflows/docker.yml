@@ -4,6 +4,9 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - 
+        name: cd
+        run: cd ./arm
       -
         name: Set up QEMU
         uses: docker/setup-qemu-action@v1
@@ -20,7 +23,7 @@ jobs:
         name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./arm
+          context: .
           plantforms: linux/arm64
           push: true
           tags: yifeigao/test:arm
