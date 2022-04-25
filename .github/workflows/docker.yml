@@ -26,4 +26,4 @@ jobs:
           file: ./arm/Dockerfile.arm
           platforms: linux/arm64
           push: true
-          tags: yifeigao/test:arm
+          tags: yifeigao/test:latest
